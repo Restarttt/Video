@@ -1,13 +1,21 @@
-import App from '../page/home'
+import Vue from "vue";
+import VueRouter from "vue-router" //引入
+import index from "../page/home/index.vue"
+import jump from "../page/jump/jump.vue"
+Vue.use(VueRouter); //安装  
 
-export default [{
-  path: '/',
-  component: App,
-  children: [{
-    path: '',
-    component: r => require.ensure([], () => r(require('../page/home')), 'home')
-  }, {
-    path: '/item',
-    component: r => require.ensure([], () => r(require('../page/item')), 'item')
-  }]
+const routes = [{
+    path: "/",
+    component: index
+}, {
+    path: "/jump",
+    component: jump
 }]
+
+const router = new VueRouter({
+    mode: "history",
+    base: process.env.BASE_URL,
+    routes,
+
+});
+export default router;

@@ -12,7 +12,8 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
     -webkit-tap-highlight-color:transparent;
     &:focus {
         outline: none;
-    }
+    };
+    box-sizing: border-box;
 }
 
 
@@ -24,6 +25,7 @@ body{
     height: 100%;
     width: 100%;
     background-size: 100% 100%;
+
 }
 
 .clear:after{
@@ -59,4 +61,11 @@ body{
 
 .show{
     display: block;
+}
+
+img{
+    width: 100%;
+}
+.content-1{
+    width: calc(50% - 5px);
 }
