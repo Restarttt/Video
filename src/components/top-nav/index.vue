@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     go(){
-      return this.$router.push('/jump')
+      return this.$router.push('/VIP')
     }
   }
 };

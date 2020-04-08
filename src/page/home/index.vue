@@ -1,9 +1,6 @@
 <template>
   <div class="overall">
-    <router-link to="/jump">
       <big-logo></big-logo>
-    </router-link>
-    <router-view />
     <top-nav :arr="arr"></top-nav>
     <roll :swiper_data="swiper_data"></roll>
     <top-menu :data="n"></top-menu>
