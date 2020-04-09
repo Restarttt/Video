@@ -5,7 +5,7 @@ import VIP from "../page/VIP/VIP.vue"
 Vue.use(VueRouter); //安装  
 
 const routes = [{
-        path: "/index", //路径名
+        path: "/", //路径名
         component: index //引入的组件
     },
     {

@@ -1,6 +1,6 @@
 <template>
   <div class="overall">
-      <big-logo></big-logo>
+    <big-logo></big-logo>
     <top-nav :arr="arr"></top-nav>
     <roll :swiper_data="swiper_data"></roll>
     <top-menu :data="n"></top-menu>
@@ -12,13 +12,13 @@
   </div>
 </template>
 <script>
-import BigLogo from "../../components/big-logo";
-import TopNav from "../../components/top-nav";
-import TopMenu from "../../components/top-menu";
-import Child from "../../components/child";
-import MiddleMenu from "../../components/middle-menu";
+import BigLogo from "../../components/home-module/big-logo";
+import TopNav from "../../components/home-module/top-nav";
+import TopMenu from "../../components/home-module/top-menu";
+import Child from "../../components/home-module/child";
+import MiddleMenu from "../../components/home-module/middle-menu";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
-import Roll from "../../components/roll";
+import Roll from "../../components/home-module/roll";
 
 export default {
   components: {
@@ -29,7 +29,8 @@ export default {
     MiddleMenu,
     swiper,
     swiperSlide,
-    Roll
+    Roll,
+
   },
 
   data() {
@@ -60,16 +61,50 @@ export default {
         ]
       },
       arr: [
-        "电视剧",
-        "VIP",
-        "电影",
-        "综艺",
-        "动漫",
-        "少儿",
-        "娱乐",
-        "潮音",
-        "游戏",
-        "纪录片"
+        {
+           name: "精选",
+           type: -1 
+        },
+        { 
+          name: "电视剧", 
+          type: 0  
+        },
+        { 
+          name: "VIP", 
+          type: 1 
+          },
+        {
+          name: "电影", 
+          type: 2 
+        },
+        { 
+          name: "综艺",
+          type: 3 
+        },
+        {
+           name: "动漫",
+            type: 4
+        },
+        { 
+          name: "少儿", 
+          type: 5 
+        },
+        { 
+          name: "娱乐", 
+          type: 6 
+         },
+        { 
+          name: "潮音", 
+          type: 7 
+         },
+        { 
+          name: "游戏", 
+          type: 8 
+        },
+        { 
+          name: "纪录片", 
+          type: 9 
+        }
       ],
       sync_data: {
         sync: "同步剧场",

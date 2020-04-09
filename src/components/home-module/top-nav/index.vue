@@ -2,15 +2,13 @@
 <template>
   <div class="topnav">
     <ul>
-      <li>
-        
-        <a href class="subnav"  @click= "go">
-          精选
-          <i class="subnav_first"></i>
-        </a>
-      </li>
-      <li v-for="(item, index) of arr " :key="index">
-        <a href>{{item}}</a>
+      <li
+        v-for="(item, index) of arr "
+        :key="index"
+        :class="{subnav :index == 0}"
+        @click="go(item.type)"
+      >
+        <a href>{{item.name }}</a>
       </li>
     </ul>
   </div>
@@ -29,8 +27,11 @@ export default {
     return {};
   },
   methods: {
-    go(){
-      return this.$router.push('/VIP')
+    go(a) {
+      console.log(a);
+      if (a == 1) {
+        return this.$router.push("/VIP");
+      }
     }
   }
 };
@@ -52,11 +53,11 @@ export default {
   display: inline-block;
   margin-right: 20px;
 }
-.topnav .subnav {
+.subnav a {
   color: #ff6002;
   position: relative;
 }
-.subnav_first {
+.subnav a:after {
   position: absolute;
   width: 10%;
   height: 2px;
