@@ -6,10 +6,14 @@
 
 <script>
 export default {
+  date(){
+    return{}
+  },
+  methods:{}
 
 }
 </script>
 
-<style>
+<style less="lang" scoped>
   	
 </style>

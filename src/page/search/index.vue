@@ -1,14 +1,25 @@
 <template>
-  <div>
-    我是搜索的页面
-        <router-view />
-    <router-link to="/">&nbsp返回</router-link>
-
+  <div class="overall">
+    <top-seach></top-seach>
+    <main-nav></main-nav>
+    <key-words></key-words>
   </div>
 </template>
 
 <script>
-export default {};
+import TopSeach from "../../components/search-module/top-search";
+import MainNav from "../../components/search-module/main-nav";
+import KeyWords from "../../components/search-module/key-words";
+
+export default {
+  components: {
+    TopSeach,
+    MainNav,
+    KeyWords
+  },
+  data() {},
+  method: {}
+};
 </script>
 
 <style>
