@@ -7,7 +7,7 @@
       </a>
     </div>
     <div class="serach">
-      <input type="submit" value="九州天空城2" />
+      <input type="submit" value="九州天空城2"  @click="go"/>
       <i></i>
     </div>
   </div>
@@ -20,7 +20,11 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {
+  go(){
+    this.$router.push('/search')
+  }
+  }
 };
 </script>
 <style lang="less" scoped>

@@ -25,7 +25,7 @@ export default {
   width: 100%;
   height: 47.8px;
   background-color: #efefef;
-  line-height: 42.8px;
+  line-height: 47.8px;
   text-align: center;
 }
 .search_submit {

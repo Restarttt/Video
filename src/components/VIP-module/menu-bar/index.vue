@@ -1,9 +1,9 @@
 <template>
   <!-- 菜单栏 -->
   <div class="menu-bar">
-    <swiper :option="swiperOption">
+    <swiper :options="swiperOption">
       <swiper-slide class="first_swiper" v-for="(item,index) of menubar.first_list" :key="index">
-        <span :class="{first_title:index == 0}">{{item}}</span>
+        <span :class="{first_swiper_title:index == 0}">{{item}}</span>
       </swiper-slide>
     </swiper>
     <div class="swiper-scrollbar"></div>
@@ -18,7 +18,7 @@
         </li>
       </ul>
     </div>
-        <div class="list">
+    <div class="list">
       <ul>
         <li
           v-for="(item,index) of menubar.third_list"
@@ -29,7 +29,7 @@
         </li>
       </ul>
     </div>
-        <div class="list">
+    <div class="list">
       <ul>
         <li
           v-for="(item,index) of menubar.fourth_list"
@@ -40,7 +40,7 @@
         </li>
       </ul>
     </div>
-        <div class="list">
+    <div class="list">
       <ul>
         <li
           v-for="(item,index) of menubar.fifth_list"
@@ -51,7 +51,7 @@
         </li>
       </ul>
     </div>
-        <div class="list">
+    <div class="list">
       <ul>
         <li
           v-for="(item,index) of menubar.sixth_list"
@@ -77,13 +77,11 @@ export default {
   data() {
     return {
       swiperOption: {
-        speed: 300,
-        autoplay: true,
-        scrollbar: ".swiper-srollbar",
-        spaceBetween: 10,
         freeMode: true,
-        slidesPerView: 6
-        // centeredSlides: true
+        scrollbar: ".swiper-srollbar",
+        freeMode: true,
+        slidesPerView: 6,
+        width: 370
       }
     };
   },
@@ -92,21 +90,22 @@ export default {
 </script>
 
 <style lang="less" scoped>
-swiper {
-  width: 100%;
-}
 .first_swiper {
-  width: 10%;
+  padding-left: 22px;
   border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-wrap: nowrap;
+  // flex-wrap: nowrap;
   height: 48px;
 }
+.first_swiper_title {
+  color: #ff6a00;
+  border: 1px solid #ff6a00;
+  border-radius: 15px;
+  padding: 5px 12px;
+}
 span {
-  // margin: 0 10px 0 0;
-  // display: inli;
   white-space: nowrap;
   color: #222222;
   font-weight: 500;
