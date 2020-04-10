@@ -39,7 +39,7 @@ export default {
   align-items: center;
   padding: 0 10px;
   position: fixed;
-  bottom: 1px;
+  bottom: 0;
 }
 .banner-left {
   display: flex;

@@ -3,10 +3,12 @@
     <div class="key_list" v-for="(item,index) of key_words.key_list" :key="index">
       <a>
         <div class="list">
-          <span :class="{hot_three:index == 0}" >{{item.num}}</span>
+          <span
+            :class="{'hot_frist':index===0,'number':index > 2,'hot_second':index === 1,'hot_three' :index ===2}"
+          >{{item.num}}</span>
           <span class="list_title">{{item.title}}</span>
         </div>
-        <i></i>
+        <i ></i>
       </a>
     </div>
   </div>
@@ -29,10 +31,8 @@ export default {
 </script>
 
 <style less="lang" scoped>
-.key-words{
-    padding: 0 15px;
-  
-
+.key-words {
+  padding: 0 15px;
 }
 .key_list {
   width: 100%;
@@ -42,21 +42,43 @@ export default {
   align-items: center;
   padding: 15px 0;
 }
+.hot_frist {
+  display: inline-block;
+  width: 17px;
+  height: 18px;
+  background-color: #e42418;
+  text-align: center;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: 500;
+}
+.hot_second {
+  display: inline-block;
+  width: 17px;
+  height: 18px;
+  background-color: #ff7100;
+  text-align: center;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: 500;
+}
 .hot_three {
   display: inline-block;
   width: 17px;
-  height: 17px;
-  background-color: #ff0000;
+  height: 18px;
+  background-color: #ffb900;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 2px;
   color: #fff;
   font-weight: 500;
 }
 .number {
+  font-size: 12px;
   display: inline-block;
   width: 16px;
   height: 16px;
-  background-color: #ccc;
+  background-color: #e6e6e6;
+  color: #878787;
   text-align: center;
   border-radius: 4px;
 }

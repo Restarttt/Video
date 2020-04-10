@@ -3,6 +3,7 @@ import VueRouter from "vue-router"
 import index from "../page/home/index.vue" //引入路径
 import VIP from "../page/VIP/VIP.vue"
 import search from "../page/search/index.vue"
+import detail from "../page/detail/index.vue"
 Vue.use(VueRouter); //安装  
 
 const routes = [{
@@ -16,6 +17,11 @@ const routes = [{
     {
         path: "/search",
         component: search
+    },
+    {
+        path: '/detail',
+        component: detail
+
     }
 ]
 

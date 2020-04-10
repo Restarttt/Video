@@ -29,8 +29,7 @@ export default {
     MiddleMenu,
     swiper,
     swiperSlide,
-    Roll,
-
+    Roll
   },
 
   data() {
@@ -42,68 +41,71 @@ export default {
             title: "【龙岭迷窟·热播】真香！胡八一发现地下秘宝",
             time: "更新至06集",
             member: "会员",
-            vip: true
+            vip: true,
+            type: 0
           },
           {
             img: "http://puui.qpic.cn/tv/0/778224481_1080607/0",
             title: "【歌手】赛制升级→华晨宇唱哭，周深绝美中国风",
             time: "更新至06集",
             member: "自制",
-            vip: false
+            vip: false,
+            type: 1
           },
           {
             img: "http://puui.qpic.cn/tv/0/782800003_1080607/0",
             title: "【王牌】沈腾再唱《小白杨》回忆军艺生涯",
             time: "2020-04-03",
             member: "会员",
-            vip: false
+            vip: false,
+            type: 2
           }
         ]
       },
       arr: [
         {
-           name: "精选",
-           type: -1 
+          name: "精选",
+          type: -1
         },
-        { 
-          name: "电视剧", 
-          type: 0  
-        },
-        { 
-          name: "VIP", 
-          type: 1 
-          },
         {
-          name: "电影", 
-          type: 2 
+          name: "电视剧",
+          type: 0
         },
-        { 
+        {
+          name: "VIP",
+          type: 1
+        },
+        {
+          name: "电影",
+          type: 2
+        },
+        {
           name: "综艺",
-          type: 3 
+          type: 3
         },
         {
-           name: "动漫",
-            type: 4
+          name: "动漫",
+          type: 4
         },
-        { 
-          name: "少儿", 
-          type: 5 
+        {
+          name: "少儿",
+          type: 5
         },
-        { 
-          name: "娱乐", 
-          type: 6 
-         },
-        { 
-          name: "潮音", 
-          type: 7 
-         },
-        { 
-          name: "游戏", 
-          type: 8 
+        {
+          name: "娱乐",
+          type: 6
         },
-        { 
-          name: "纪录片", 
-          type: 9 
+        {
+          name: "潮音",
+          type: 7
+        },
+        {
+          name: "游戏",
+          type: 8
+        },
+        {
+          name: "纪录片",
+          type: 9
         }
       ],
       sync_data: {

@@ -57,7 +57,8 @@ export default {
   color: #ff6002;
   position: relative;
 }
-.subnav a:after {
+.subnav a::after {
+  content: '';
   position: absolute;
   width: 10%;
   height: 2px;

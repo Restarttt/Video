@@ -5,8 +5,9 @@
       <swiper-slide class="first_swiper" v-for="(item,index) of menubar.first_list" :key="index">
         <span :class="{first_swiper_title:index == 0}">{{item}}</span>
       </swiper-slide>
+      <div class="swiper-scrollbar"></div>
     </swiper>
-    <div class="swiper-scrollbar"></div>
+
     <div class="list">
       <ul>
         <li
@@ -78,10 +79,12 @@ export default {
     return {
       swiperOption: {
         freeMode: true,
-        scrollbar: ".swiper-srollbar",
-        freeMode: true,
         slidesPerView: 6,
-        width: 370
+        width: 370,
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          hide:false
+        }
       }
     };
   },
@@ -135,5 +138,10 @@ ul {
 }
 ul li {
   margin: 0 22px 0 0;
+}
+.swiper-scrollbar{
+  width: 100%;
+  height: 10px;
+
 }
 </style>

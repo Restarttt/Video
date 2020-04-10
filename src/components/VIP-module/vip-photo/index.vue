@@ -2,20 +2,18 @@
   <!-- 电影图片 -->
   <div class="vip-photo">
     <div class="photo_list" v-for="(item,index) of photo.photo_list" :key="index">
-      <div class="photo_icon">
+      <div class="photo_icon" v-if="item.type ==1">
         <img :src="item.img" />
-        <!-- <i>
-          <img
-            src="https://i.gtimg.cn/qqlive/images/20160715/only@2x.png"
-            v-if="item.suspend == vip "
-          />
+        <i class="vip_icon" >
+          <img :src="item.only" />
         </i>
-        <i>
-          <img
-            src="https://puui.qpic.cn/vcover_vt_pic/0/mzc00200a7ghbkc1584601367734/220"
-            v-if="item.suspend == only"
-          />
-        </i> -->
+        <p>{{item.title}}</p>
+      </div>
+         <div class="photo_icon" v-else-if="item.type ==2">
+        <img :src="item.img" />
+        <i class="vip_icon" >
+          <img :src="item.vip" />
+        </i>
         <p>{{item.title}}</p>
       </div>
     </div>
@@ -48,12 +46,16 @@ export default {
   position: relative;
   margin: 0 4px 8px;
 }
-// img::after {
-//   content: "";
-//   color: ;
-// }
+.photo_icon {
+  position: relative;
+}
 p {
   text-align: center;
   color: #222222;
+}
+.vip_icon {
+  width: 37px;
+  position: absolute;
+  right: 1px;
 }
 </style>

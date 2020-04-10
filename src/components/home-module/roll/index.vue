@@ -2,8 +2,8 @@
 <template>
   <div class="roll">
     <swiper :options="swiperOption">
-      <swiper-slide v-for="(item,Index) in swiper_data.list" :key="Index">
-        <div class="big-pic">
+      <swiper-slide v-for="(item,Index) in swiper_data.list" :key="Index" >
+        <div class="big-pic" @click="go(item.type)">
           <div class="img-suspend">
             <img :src="item.img" class="full-card" />
             <div class="member-center" v-if="item.vip">
@@ -48,7 +48,14 @@ export default {
       }
     };
   },
-  methods: {}
+  methods: {
+     go(a) {
+      console.log(a);
+      if (a == 1) {
+        return this.$router.push("/detail");
+      }
+    }
+  }
 };
 </script>
 <style lang="less" scoped>
@@ -89,9 +96,9 @@ export default {
   font-weight: 600;
 }
 // // 左上角的图标
-.img-suspend{
+.img-suspend {
   position: relative;
-    // height: 94.28px;
+  // height: 94.28px;
 }
 .member-center {
   display: flex;
