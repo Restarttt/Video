@@ -1,4 +1,5 @@
 <template>
+<!-- 关键字之类的 -->
   <div class="key-words">
     <div class="key_list" v-for="(item,index) of key_words.key_list" :key="index">
       <a>
@@ -8,7 +9,9 @@
           >{{item.num}}</span>
           <span class="list_title">{{item.title}}</span>
         </div>
-        <i ></i>
+        <!-- <i v-if="item.status == 0" class="line"></i>
+        <i v-if="item.status == 1" class="go-up"></i>
+        <i v-if="item.status == 2" class="decline"></i> -->
       </a>
     </div>
   </div>
@@ -86,4 +89,14 @@ export default {
   padding-left: 5px;
   font-weight: 500;
 }
+
+/* 持平 */
+.line{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url('../../../images/down.png');
+}
+/* 上升 */
+/* 下降 */
 </style>

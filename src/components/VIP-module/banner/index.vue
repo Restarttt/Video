@@ -1,5 +1,5 @@
 <template>
-	<div class="banner">
+  <div class="banner">
     <div class="load"></div>
     <div class="home"></div>
   </div>
@@ -7,16 +7,15 @@
 
 <script>
 export default {
-  date(){
-    return{}
+  date() {
+    return {};
   },
-  methods:{}
-
-}
+  methods: {}
+};
 </script>
 
 <style less="lang" scoped>
-.banner{
+.banner {
   width: 100%;
   height: 44px;
   background-color: #363636;
@@ -30,15 +29,15 @@ export default {
 .load {
   width: 25px;
   height: 25px;
-  background: url(https://vm.gtimg.cn/tencentvideo/vstyle/mobile/vip/style/app_v2/img/common/g_menubar_btn.png)  -48px 0 no-repeat;
+  background: url(https://vm.gtimg.cn/tencentvideo/vstyle/mobile/vip/style/app_v2/img/common/g_menubar_btn.png) -47px
+    0 no-repeat;
   background-size: cover;
 }
-.home{
-    width: 25px;
+.home {
+  width: 25px;
   height: 25px;
-  background: url(https://vm.gtimg.cn/tencentvideo/vstyle/mobile/vip/style/app_v2/img/common/g_menubar_btn.png) -74px 0 no-repeat;
+  background: url(https://vm.gtimg.cn/tencentvideo/vstyle/mobile/vip/style/app_v2/img/common/g_menubar_btn.png) -72px
+    0 no-repeat;
   background-size: cover;
-
 }
-  	
 </style>

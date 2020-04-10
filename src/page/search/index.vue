@@ -42,87 +42,87 @@ export default {
           {
             num: 1,
             title: "王牌对王牌  第五季",
-            icon: ""
+            status: 0
           },
           {
             num: 2,
             title: "我是余欢水",
-            icon: ""
+            status: 1
           },
           {
             num: 3,
             title: "龙岭迷窟",
-            icon: ""
+            status: 2
           },
           {
             num: 4,
             title: "安家",
-            icon: ""
+            status: 0
           },
           {
             num: 5,
             title: "如懿传",
-            icon: ""
+            status: 2
           },
           {
             num: 6,
             title: "冰糖炖雪梨",
-            icon: ""
+            status: 1
           },
           {
             num: 7,
             title: "大鱼",
-            icon: ""
+            status: 2
           },
           {
             num: 8,
             title: "小猪佩奇 第一季",
-            icon: ""
+            status: 2
           },
           {
             num: 9,
             title: "极限挑战 第二季",
-            icon: ""
+            status: 2
           },
           {
             num: 10,
             title: "三生三世枕上书",
-            icon: ""
+            status: 2
           },
             {
             num: 10,
             title: "三生三世枕上书",
-            icon: ""
+            status: 2
           },
             {
             num: 10,
             title: "三生三世枕上书",
-            icon: ""
+            status: 0
           },
                 {
             num: 10,
             title: "三生三世枕上书",
-            icon: ""
+            status: 2
           },
                 {
             num: 10,
             title: "三生三世枕上书",
-            icon: ""
+            status: 2
           },
                 {
             num: 10,
             title: "三生三世枕上书",
-            icon: ""
+            status: 1
           },
                 {
             num: 10,
             title: "三生三世枕上书",
-            icon: ""
+            status: 2
           },
                 {
             num: 10,
             title: "三生三世枕上书",
-            icon: ""
+            status: 1
           },
         ]
       }

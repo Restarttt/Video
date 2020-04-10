@@ -5,14 +5,14 @@
       <div class="photo_icon" v-if="item.type ==1">
         <img :src="item.img" />
         <i class="vip_icon" >
-          <img :src="item.only" />
+          <img src="https://i.gtimg.cn/qqlive/images/20190528/VIP.png" />
         </i>
         <p>{{item.title}}</p>
       </div>
          <div class="photo_icon" v-else-if="item.type ==2">
         <img :src="item.img" />
         <i class="vip_icon" >
-          <img :src="item.vip" />
+          <img src="https://i.gtimg.cn/qqlive/images/20160715/only@2x.png" />
         </i>
         <p>{{item.title}}</p>
       </div>

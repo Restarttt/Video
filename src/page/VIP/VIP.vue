@@ -12,7 +12,7 @@ import { swiper, swiperSlide } from "vue-awesome-swiper";
 import VipSearch from "../../components/VIP-module/vip-search";
 import MenuBar from "../../components/VIP-module/menu-bar";
 import VipPhoto from "../../components/VIP-module/vip-photo";
-import Banner from "../../components/VIP-module/banner"
+import Banner from "../../components/VIP-module/banner";
 
 export default {
   components: {
@@ -88,120 +88,90 @@ export default {
             title: "龙岭迷窟",
             img:
               "https://puui.qpic.cn/vcover_vt_pic/0/mzc00200q06w7zx1585705974472/220",
-            vip: "https://i.gtimg.cn/qqlive/images/20160715/only@2x.png",
-            only: "https://i.gtimg.cn/qqlive/images/20190528/VIP.png",
             type: 1
           },
           {
             title: "奇门遁甲",
             img:
               "https://puui.qpic.cn/vcover_vt_pic/0/mzc00200a7ghbkc1584601367734/220",
-            vip: "https://i.gtimg.cn/qqlive/images/20160715/only@2x.png",
-            only: "https://i.gtimg.cn/qqlive/images/20190528/VIP.png",
             type: 2
           },
           {
             title: "悍战",
             img:
               "https://puui.qpic.cn/vcover_vt_pic/0/mzc00200i3gpva41580455616/220",
-            vip: "https://i.gtimg.cn/qqlive/images/20160715/only@2x.png",
-            only: "https://i.gtimg.cn/qqlive/images/20190528/VIP.png",
             type: 1
           },
           {
             title: "我是山姆",
             img:
               "https://puui.qpic.cn/vcover_vt_pic/0/vox06nwx47wuy5t1523599562/220",
-            vip: "https://i.gtimg.cn/qqlive/images/20160715/only@2x.png",
-            only: "https://i.gtimg.cn/qqlive/images/20190528/VIP.png",
             type: 1
           },
           {
             title: "冰雪奇缘",
             img:
               "https://puui.qpic.cn/vcover_vt_pic/0/bv8m91i5jj1w1ww1574426519/220",
-            vip: "https://i.gtimg.cn/qqlive/images/20160715/only@2x.png",
-            only: "https://i.gtimg.cn/qqlive/images/20190528/VIP.png",
             type: 1
           },
           {
             title: "傲慢与偏见",
             img:
               "https://puui.qpic.cn/vcover_vt_pic/0/dchep5ox42l26i91567664795/220",
-            vip: "https://i.gtimg.cn/qqlive/images/20160715/only@2x.png",
-            only: "https://i.gtimg.cn/qqlive/images/20190528/VIP.png",
             type: 2
           },
           {
             title: "肖生克的救赎",
             img:
               "https://puui.qpic.cn/vcover_vt_pic/0/1o29ui77e85grdr1567129471/220",
-            vip: "https://i.gtimg.cn/qqlive/images/20160715/only@2x.png",
-            only: "https://i.gtimg.cn/qqlive/images/20190528/VIP.png",
             type: 2
           },
           {
             title: "绿皮书",
             img:
               "https://puui.qpic.cn/vcover_vt_pic/0/r9umzdo0yjelfg11567422437/220",
-            vip: "https://i.gtimg.cn/qqlive/images/20160715/only@2x.png",
-            only: "https://i.gtimg.cn/qqlive/images/20190528/VIP.png",
             type: 1
           },
           {
             title: "泰坦尼克号",
             img:
               "https://puui.qpic.cn/vcover_vt_pic/0/t5jqhgw8pix81mw1567138555/220",
-            vip: "https://i.gtimg.cn/qqlive/images/20160715/only@2x.png",
-            only: "https://i.gtimg.cn/qqlive/images/20190528/VIP.png",
             type: 1
           },
           {
             title: "穿普拉达的女王",
             img:
               "https://puui.qpic.cn/vcover_vt_pic/0/5g96116jj92ww6i1567483330/220",
-            vip: "https://i.gtimg.cn/qqlive/images/20160715/only@2x.png",
-            only: "https://i.gtimg.cn/qqlive/images/20190528/VIP.png",
             type: 2
           },
           {
             title: "阿甘正传",
             img:
               "https://puui.qpic.cn/vcover_vt_pic/0/r6hc2kqgvnmiejn1567396046/220",
-            vip: "https://i.gtimg.cn/qqlive/images/20160715/only@2x.png",
-            only: "https://i.gtimg.cn/qqlive/images/20190528/VIP.png",
             type: 1
           },
           {
             title: "心灵捕手",
             img:
               "https://puui.qpic.cn/vcover_vt_pic/0/mhl665xf8ina3t21567580702/220",
-            vip: "https://i.gtimg.cn/qqlive/images/20160715/only@2x.png",
-            only: "https://i.gtimg.cn/qqlive/images/20190528/VIP.png",
             type: 1
           },
           {
             title: "低俗小说",
             img:
               "https://puui.qpic.cn/vcover_vt_pic/0/k2zh09k7oid23o0t1444896126.jpg/220",
-            vip: "https://i.gtimg.cn/qqlive/images/20160715/only@2x.png",
-            only: "https://i.gtimg.cn/qqlive/images/20190528/VIP.png",
             type: 1
           },
           {
             title: "中国机长",
             img:
               "https://puui.qpic.cn/vcover_vt_pic/0/rj8uc45tm8a17wm1575030295/220",
-            vip: "https://i.gtimg.cn/qqlive/images/20160715/only@2x.png",
-            only: "https://i.gtimg.cn/qqlive/images/20190528/VIP.png",
             type: 1
           },
           {
             title: "少年的你",
             img:
               "https://puui.qpic.cn/vcover_vt_pic/0/714pdmcrnqdlmdx1574668477/220",
-            vip: "https://i.gtimg.cn/qqlive/images/20160715/only@2x.png",
-            only: "https://i.gtimg.cn/qqlive/images/20190528/VIP.png",
             type: 1
           }
         ]
