@@ -3,11 +3,15 @@
   <div class="biglogo">
     <div class="logo-left">
       <a href="https://m.v.qq.com/index.html">
-        <img class="logo" src="//puui.qpic.cn/vupload/0/1570516378024_vr59hnsql8.png/0" height="24px" />
+        <img
+          class="logo"
+          src="//puui.qpic.cn/vupload/0/1570516378024_vr59hnsql8.png/0"
+          height="24px"
+        />
       </a>
     </div>
     <div class="serach">
-      <input type="submit" value="九州天空城2"  @click="go"/>
+      <input type="text" value="九州天空城2" @click="go" />
       <i></i>
     </div>
   </div>
@@ -21,9 +25,9 @@ export default {
     return {};
   },
   methods: {
-  go(){
-    this.$router.push('/search')
-  }
+    go() {
+      this.$router.push("/search");
+    }
   }
 };
 </script>
@@ -39,13 +43,14 @@ export default {
   height: 24px;
 }
 .serach input {
-  width: 179%;
+  width: 213%;
   height: 30px;
   border-radius: 5px;
   background-color: #f6f5f7;
   color: #b3b3b3;
   position: relative;
-  left: -64px;
+  left: -82px;
+  padding-left: 15px;
 }
 .logo {
   width: 40%;
