@@ -1,10 +1,10 @@
 <template>
   <!-- 电影图片 -->
   <div class="vip-photo">
-    <div class="photo_list" v-for="(item,index) of photo" :key="index">
+    <div class="photo_list" v-for="(item,index) of photo" :key="index" >
       <a :href="item.url">
-        <div class="photo_icon" v-if="item.type > 0 " @click="go(index)">
-          <img :src="item.imgv" v-if="item.imgv != null" />
+        <div class="photo_icon" v-if="item.type > 0  && item.imgv" @click="go(index)">
+          <img :src="item.imgv" />
           <i class="vip_icon">
             <img src="https://i.gtimg.cn/qqlive/images/20190528/VIP.png" v-if="item.vip == 10" />
             <img
