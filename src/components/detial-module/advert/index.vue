@@ -1,13 +1,19 @@
 <template>
 <!-- 轮播图-->
-  <div class="advent"></div>
+  <div class="advent">
+    <swiper>
+      <swiper-slide>
+        
+      </swiper-slide>
+    </swiper>
+  </div>
 </template>
 
 <script>
 export default {
   name: "advent",
   props: {},
-  date() {
+  data() {
     return {};
   },
   methods: {}

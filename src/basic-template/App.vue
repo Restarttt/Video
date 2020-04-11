@@ -6,7 +6,7 @@
 export default {
   name: "",
   props: {},
-  date() {
+  data() {
     return {};
   },
   methods: {}

@@ -13,7 +13,7 @@ export default {
       defalut: []
     }
   },
-  date() {
+  data() {
     return {};
   },
   methods: {}

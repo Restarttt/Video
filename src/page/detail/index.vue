@@ -1,10 +1,10 @@
 <template>
   <!-- 详情页 -->
   <div class="detail">
-    <banner ></banner>
+    <banner></banner>
     <player></player>
-    <video-info></video-info>
-    <advent></advent>这里这里
+    <video-info :list="vip_list"></video-info>
+    <advent></advent>
   </div>
 </template>
 
@@ -24,10 +24,9 @@ export default {
     Advent
   },
 
-
-  date() {
+  data() {
     return {
-     
+      vip_list: []
     };
   },
   mounted() {

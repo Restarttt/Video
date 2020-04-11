@@ -90,7 +90,7 @@ export default {
   font-size: 14px;
   color: #000028;
   position: absolute;
-  left: 87%;
+  left: 88%;
   bottom: 7px;
   background-color: #f2f4f5;
   font-weight: 600;

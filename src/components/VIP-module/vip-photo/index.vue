@@ -8,10 +8,6 @@
           <img src="https://i.gtimg.cn/qqlive/images/20190528/VIP.png" />
         </i>
         <p>{{item.title}}</p>
-        <div
-          class="status"
-          :class="{'line':item.status == 0,'up':item.status ==1,down:item.status ==2}"
-        ></div>
       </div>
       <div class="photo_icon" v-else-if="item.type ==2">
         <img :src="item.img" />
@@ -19,10 +15,7 @@
           <img src="https://i.gtimg.cn/qqlive/images/20160715/only@2x.png" />
         </i>
         <p>{{item.title}}</p>
-        <div
-          class="status"
-          :class="{'line':item.status == 0,'up':item.status ==1,down:item.status ==2}"
-        ></div>
+  
       </div>
     </div>
   </div>
@@ -67,10 +60,5 @@ p {
   right: 1px;
 }
 // 持平
-line {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  background: url(../../../images/line.png) 0 0 no-repeat;
-}
+
 </style>

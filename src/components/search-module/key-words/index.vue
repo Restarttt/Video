@@ -1,5 +1,5 @@
 <template>
-<!-- 关键字之类的 -->
+  <!-- 关键字之类的 -->
   <div class="key-words">
     <div class="key_list" v-for="(item,index) of key_words.key_list" :key="index">
       <a>
@@ -11,7 +11,11 @@
         </div>
         <!-- <i v-if="item.status == 0" class="line"></i>
         <i v-if="item.status == 1" class="go-up"></i>
-        <i v-if="item.status == 2" class="decline"></i> -->
+        <i v-if="item.status == 2" class="decline"></i>-->
+        <div
+          class="status"
+          :class="{'line':item.status == 0,'up':item.status ==1,down:item.status ==2}"
+        ></div>
       </a>
     </div>
   </div>
@@ -44,6 +48,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
+  position: relative;
 }
 .hot_frist {
   display: inline-block;
@@ -91,12 +96,36 @@ export default {
 }
 
 /* 持平 */
-.line{
+.line {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url('../../../images/down.png');
+  background: url("../../../images/line.png") 0 0 no-repeat;
+  background-size: 100%;
+  position: absolute;
+  right: 10px;
+  top: 35%;
 }
 /* 上升 */
+.up {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url("../../../images/up.png") 0 0 no-repeat;
+  background-size: 100%;
+  position: absolute;
+  right: 10px;
+  top: 35%;
+}
 /* 下降 */
+.down {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url("../../../images/down.png") 0 0 no-repeat;
+  background-size: 100%;
+  position: absolute;
+  right: 10px;
+  top: 35%;
+}
 </style>

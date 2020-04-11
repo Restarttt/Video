@@ -82,7 +82,7 @@ export default {
           {
             num: 9,
             title: "极限挑战 第二季",
-            status: 2
+            status: 1
           },
           {
             num: 10,
@@ -92,17 +92,17 @@ export default {
             {
             num: 10,
             title: "三生三世枕上书",
-            status: 2
+            status: 1
           },
             {
             num: 10,
             title: "三生三世枕上书",
-            status: 0
+            status: 1
           },
                 {
             num: 10,
             title: "三生三世枕上书",
-            status: 2
+            status: 0
           },
                 {
             num: 10,
