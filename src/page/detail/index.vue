@@ -1,23 +1,44 @@
 <template>
-  <div v-for="(item,index) of list " :key="index">{{item.list}}</div>
+  <!-- 详情页 -->
+  <div class="detail">
+    <banner ></banner>
+    <player></player>
+    <video-info></video-info>
+    <advent></advent>这里这里
+  </div>
 </template>
 
 <script>
+import Banner from "../../components/detial-module/banner";
+import Player from "../../components/detial-module/player";
+import VideoInfo from "../../components/detial-module/video-info";
+import Advent from "../../components/detial-module/advert";
 import AJAX from "../../config/ajax";
+
 export default {
-  // components:{AJAX},
+  name: "detail",
+  components: {
+    Banner,
+    Player,
+    VideoInfo,
+    Advent
+  },
+
+
   date() {
     return {
-      list: []
+     
     };
   },
   mounted() {
     AJAX.getVIP({
       callback: res => {
-        this.list = res.data.data;
+        console.log(res);
+        this.vip_list = res.data.data;
       }
     });
   },
+
   methods: {}
 };
 </script>
