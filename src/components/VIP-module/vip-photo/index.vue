@@ -1,22 +1,20 @@
 <template>
   <!-- 电影图片 -->
   <div class="vip-photo">
-    <div class="photo_list" v-for="(item,index) of photo.photo_list" :key="index">
-      <div class="photo_icon" v-if="item.type ==1">
-        <img :src="item.img" />
-        <i class="vip_icon">
-          <img src="https://i.gtimg.cn/qqlive/images/20190528/VIP.png" />
-        </i>
-        <p>{{item.title}}</p>
-      </div>
-      <div class="photo_icon" v-else-if="item.type ==2">
-        <img :src="item.img" />
-        <i class="vip_icon">
-          <img src="https://i.gtimg.cn/qqlive/images/20160715/only@2x.png" />
-        </i>
-        <p>{{item.title}}</p>
-  
-      </div>
+    <div class="photo_list" v-for="(item,index) of photo" :key="index">
+      <a :href="item.url">
+        <div class="photo_icon" v-if="item.type > 0 " @click="go(index)">
+          <img :src="item.imgv" v-if="item.imgv != null" />
+          <i class="vip_icon">
+            <img src="https://i.gtimg.cn/qqlive/images/20190528/VIP.png" v-if="item.vip == 10" />
+            <img
+              src="https://i.gtimg.cn/qqlive/images/20160715/only@2x.png"
+              v-else-if="item.vip == 0"
+            />
+          </i>
+          <p>{{item.name}}</p>
+        </div>
+      </a>
     </div>
   </div>
 </template>
@@ -25,13 +23,20 @@
 export default {
   name: "vip-photo",
   props: {
-    photo: Object,
-    defalut: {}
+    photo: {
+      type: Array,
+      defalut: []
+    }
   },
   data() {
     return {};
   },
-  methods: {}
+  methods: {
+    go(a) {
+      console.log(a);
+      return a;
+    }
+  }
 };
 </script>
 
@@ -53,6 +58,9 @@ export default {
 p {
   text-align: center;
   color: #222222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .vip_icon {
   width: 37px;
@@ -60,5 +68,4 @@ p {
   right: 1px;
 }
 // 持平
-
 </style>

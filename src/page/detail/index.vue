@@ -13,7 +13,7 @@ import Banner from "../../components/detial-module/banner";
 import Player from "../../components/detial-module/player";
 import VideoInfo from "../../components/detial-module/video-info";
 import Advent from "../../components/detial-module/advert";
-import AJAX from "../../config/ajax";
+// import AJAX from "../../config/ajax";
 
 export default {
   name: "detail",
@@ -29,14 +29,14 @@ export default {
       vip_list: []
     };
   },
-  mounted() {
-    AJAX.getVIP({
-      callback: res => {
-        console.log(res);
-        this.vip_list = res.data.data;
-      }
-    });
-  },
+  // mounted() {
+  //   AJAX.getVIP({
+  //     callback: res => {
+  //       console.log(res);
+  //       this.vip_list = res.data.data;
+  //     }
+  //   });
+  // },
 
   methods: {}
 };
