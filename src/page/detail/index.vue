@@ -3,8 +3,8 @@
   <div class="detail">
     <banner></banner>
     <player></player>
-    <video-info :list="vip_list"></video-info>
-    <advent></advent>
+    <video-info ></video-info>
+    <roll-pic></roll-pic>
   </div>
 </template>
 
@@ -12,7 +12,7 @@
 import Banner from "../../components/detial-module/banner";
 import Player from "../../components/detial-module/player";
 import VideoInfo from "../../components/detial-module/video-info";
-import Advent from "../../components/detial-module/advert";
+import RollPic from "../../components/detial-module/roll-pic";
 // import AJAX from "../../config/ajax";
 
 export default {
@@ -21,12 +21,18 @@ export default {
     Banner,
     Player,
     VideoInfo,
-    Advent
+    RollPic 
   },
 
   data() {
     return {
-      vip_list: []
+      roll_pic:{
+        roll:[
+          
+
+        ]
+      }
+      
     };
   },
   // mounted() {

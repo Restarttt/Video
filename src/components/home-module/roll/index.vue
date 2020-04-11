@@ -6,14 +6,14 @@
         <div class="big-pic" @click="go(item.type)">
           <div class="img-suspend">
             <img :src="item.img" class="full-card" />
-            <div class="member-center" v-if="item.vip">
+            <div class="member-center" v-if="item.vip == 10">
               <div class="triangle"></div>
-              <span>{{item.member}}</span>
+              <span>VIP</span>
             </div>
           </div>
 
           <div class="swiper-title">
-            <span>{{item.title}}</span>
+            <span>{{item.summary}}</span>
           </div>
         </div>
       </swiper-slide>
@@ -62,16 +62,13 @@ export default {
 //轮播图
 .roll {
   width: 100%;
-  padding: 0 10px;
   position: relative;
   background-image: -webkit-linear-gradient(90deg, #f2f4f5, #fff 59%);
 }
 .big-pic {
-  margin: 0 auto;
   display: inline-block;
 }
 .big-pic img {
-  // width: 100%;
   margin-top: 3%;
   height: 193.11px;
 }
@@ -91,7 +88,7 @@ export default {
   color: #000028;
   position: absolute;
   left: 88%;
-  bottom: 7px;
+  bottom: 5px;
   background-color: #f2f4f5;
   font-weight: 600;
 }

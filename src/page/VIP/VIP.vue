@@ -92,6 +92,7 @@ export default {
       callback: res => {
         console.log(res)
         this.photo_list = res.data.data;
+        
       }
     });
   },

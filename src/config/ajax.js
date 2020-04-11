@@ -3,7 +3,9 @@ import axios from 'axios'
 const apiBaseUrl = 'https://www.shuipingguo.com'
 const urlMap = {
     getList: apiBaseUrl + '/list1',
-    getVIP: apiBaseUrl + '/getvideo/list_vip'
+    getVIP: apiBaseUrl + '/getvideo/list_vip',
+    getHome: apiBaseUrl + '/getvideo'
+
 
 }
 
@@ -33,8 +35,19 @@ const HttpClient = {
                 options.failcallback && options.failcallback(error);
             })
             .then(function() {})
-
-
+    },
+    getHome: (a) => {
+        axios
+            .get(urlMap.getHome, {
+                parames: a.parames
+            })
+            .then(function(response) {
+                a.callback && a.callback(response);
+            })
+            .catch(function(error) {
+                a.failcallbcak && a.failcallback(error);
+            })
+            .then(function() {})
     }
 }
 

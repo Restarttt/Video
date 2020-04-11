@@ -2,25 +2,26 @@
 <template>
   <div class="submenu">
     <h5 @click="getrandom">
-      {{data.title}}:
+      {{bomb.title}}:
       <span>{{b}}</span>
     </h5>
 
     <div class="content">
-      <div class="content-1" v-for="(item,index) of data.list" :key="index">
+      <div class="content-1" v-for="(item,index) of bomb.list" :key="index">
         <div class="img-suspend">
           <img v-bind:src="item.img" />
           <div class="update">
-            <span>{{item.time}}</span>
+            <!-- 右下角 -->
+            <span>{{item.name}}</span>
           </div>
-          <div class="member-center" v-if="item.vip">
+          <div class="member-center" v-if="item.vip ==10">
             <div class="triangle"></div>
             <span>{{item.member}}</span>
           </div>
         </div>
 
         <p class="big-title">{{item.name}}</p>
-        <p class="small-title">{{item.title}}</p>
+        <p class="small-title">{{item.summary}}</p>
       </div>
       <div class="change">
         <span>换一换</span>
@@ -33,7 +34,7 @@
 export default {
   name: "top-menu",
   props: {
-    data: {
+    bomb: {
       type: Object,
       default: {}
     }

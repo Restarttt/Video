@@ -1,29 +1,32 @@
 <template>
   <div class="big-theater">
     <h5 @click="getrandom">
-      {{sync_data.sync}}
+      {{sync_data.title}}
       <span>{{b}}</span>
     </h5>
     <div class="content">
       <div
         class="content-1"
-        v-for="(item,index) of sync_data.sync_message"
+        v-for="(item,index) of sync_data.list"
         :key="index"
         :class=" {first_content: index == 0} "
       >
+      <a :href="item.url">
         <div class="img-suspend">
           <img :src="item.img" />
           <div class="update">
-            <span>{{item.time}}</span>
+            <span>{{item.name}}</span>
           </div>
-          <div class="member-center" v-if="item.vip">
+          <div class="member-center" v-if="item.vip == 10">
             <div class="triangle"></div>
-            <span>{{item.member}}</span>
+            <span>vip</span>
           </div>
         </div>
         <p class="big-title">{{item.name}}</p>
-        <p class="small-title">{{item.title}}</p>
+        <p class="small-title">{{item.summary}}</p>
+        </a>
       </div>
+   
     </div>
   </div>
 </template>

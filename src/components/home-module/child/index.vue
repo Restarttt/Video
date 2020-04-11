@@ -2,17 +2,21 @@
 <template>
   <div class="swiper-child">
     <h5 @click="getrandom">
-      {{children_data.child}}
+      {{children_data.title}}
       <span>{{b}}</span>
     </h5>
     <swiper :options="swiperOption">
-      <swiper-slide v-for="(item,index) of children_data.theatre" :key="index">
+ 
+      <swiper-slide v-for="(item,index) of children_data.list" :key="index">
+             <a :href="item.url">
         <div class="cartoon">
           <img :src="item.img" @click="getsubscript(index, item.name)" />
           <p class="big-title">{{item.name}}</p>
           <p class="small-title" @click=" getnum">{{item.title}}</p>
         </div>
+            </a>
       </swiper-slide>
+  
       <!-- <div slot="pagination" class="swiper-pagination"></div> -->
     </swiper>
   </div>
@@ -44,8 +48,9 @@ export default {
       this.b = ++a;
       console.log(this.b);
     },
-    getsubscript(c, d) {
-      console.log(c, d);
+    // 点击打印下标和name
+    getsubscript(c,d) {
+      console.log(c,d);
     },
     getnum(d) {
       let num = Math.round(Math.random() * 6);
