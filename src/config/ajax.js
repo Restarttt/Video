@@ -36,18 +36,20 @@ const HttpClient = {
             })
             .then(function() {})
     },
-    getHome: (a) => {
+    getHome: (options) => {
+        console.log(options)
         axios
             .get(urlMap.getHome, {
-                parames: a.parames
+                params: options.params
             })
             .then(function(response) {
-                a.callback && a.callback(response);
+                options.callback && options.callback(response);
             })
             .catch(function(error) {
-                a.failcallbcak && a.failcallback(error);
+                options.failcallbcak && options.failcallback(error);
             })
             .then(function() {})
+
     }
 }
 

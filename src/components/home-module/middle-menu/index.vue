@@ -15,7 +15,7 @@
         <div class="img-suspend">
           <img :src="item.img" />
           <div class="update">
-            <span>{{item.name}}</span>
+            <span>{{item.score}}.0</span>
           </div>
           <div class="member-center" v-if="item.vip == 10">
             <div class="triangle"></div>

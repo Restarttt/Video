@@ -12,7 +12,7 @@
           <img v-bind:src="item.img" />
           <div class="update">
             <!-- 右下角 -->
-            <span>{{item.name}}</span>
+            <span>全{{item.max}}集</span>
           </div>
           <div class="member-center" v-if="item.vip ==10">
             <div class="triangle"></div>

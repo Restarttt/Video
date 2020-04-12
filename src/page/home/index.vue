@@ -2,13 +2,13 @@
   <div class="overall">
     <big-logo></big-logo>
     <top-nav :arr="arr"></top-nav>
-    <roll :swiper_data="swiper_data"></roll>
-    <top-menu :bomb="bomb"></top-menu>
-    <top-menu :bomb="bomb"></top-menu>
-    <child :children_data="children"></child>
-    <middle-menu :sync_data="sync_data"></middle-menu>
-    <top-menu :bomb="bomb"></top-menu>
-    <middle-menu :sync_data="hot"></middle-menu>
+    <div class="all" v-for="(item, index) of all" :key="index">
+      <roll :swiper_data="item" v-if="item.type == 1"></roll>
+      <top-menu :bomb="item" v-if="item.type == 3"></top-menu>
+      <child :children_data="item" v-if="item.type == 2"></child>
+      <middle-menu :sync_data="item" v-if="item.type == 4"></middle-menu>
+      <top-menu :bomb="item" v-if="item.type == 5"></top-menu>
+    </div>
   </div>
 </template>
 <script>
@@ -32,14 +32,9 @@ export default {
     swiperSlide,
     Roll
   },
-
   data() {
     return {
-      swiper_data: {},
-      bomb: { menmber: "自制", vipp: "vip", status: 1 },
-      sync_data: {},
-      hot: {},
-      children: {},
+      all: [],
       arr: [
         {
           name: "精选",
@@ -92,12 +87,11 @@ export default {
     AJAX.getHome({
       callback: res => {
         console.log(res);
-        this.swiper_data = res.data.data[0];
-        this.children = res.data.data[1];
-        this.bomb = res.data.data[2];
-        console.log(this.bomb)
-        this.sync_data = res.data.data[3];
-        this.hot = res.data.data[4];
+        this.all = res.data.data;
+        console.log(all);
+      },
+      params: {
+        type: 3
       }
     });
   },
