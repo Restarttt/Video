@@ -5,7 +5,7 @@
       <li
         v-for="(item, index) of arr "
         :key="index"
-        :class="{subnav :index == 0}"
+        :class="{subnav :active == item.type}"
         @click="go(item.type)"
       >
         <a href>{{item.name }}</a>
@@ -24,12 +24,15 @@ export default {
     }
   },
   data() {
-    return {};
+    return {
+      active: ''
+    };
   },
   methods: {
-    go(a) {
-      console.log(a);
-      if (a == 1) {
+    go(type) {
+      this.active = type;
+      console.log(type);
+      if (type == 1) {
         return this.$router.push("/VIP");
       }
     }
@@ -44,6 +47,7 @@ export default {
 .topnav ul {
   overflow-x: auto;
   white-space: nowrap;
+  height: 39.6px;
 }
 // 取消滚动框
 .topnav ul::-webkit-scrollbar {
@@ -58,13 +62,13 @@ export default {
   position: relative;
 }
 .subnav a::after {
-  content: '';
+  content: "";
   position: absolute;
-  width: 10%;
+  width: 18px;
   height: 2px;
   background-color: #ff6002;
-  top: 28px;
-  left: 9px;
+  top: 26px;
+  left: 8px;
 }
 ul li a {
   color: #272727;

@@ -80,7 +80,7 @@ export default {
           name: "纪录片",
           type: 9
         }
-      ]
+      ],
     };
   },
   mounted() {
@@ -89,10 +89,10 @@ export default {
         console.log(res);
         this.all = res.data.data;
         console.log(all);
-      },
-      params: {
-        type: 3
       }
+      // params: {
+      //   type: 2
+      // }
     });
   },
   methods: {}
