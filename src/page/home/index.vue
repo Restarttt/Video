@@ -38,19 +38,19 @@ export default {
       arr: [
         {
           name: "精选",
-          type: -1
+          type: ''
         },
         {
           name: "电视剧",
-          type: 0
+          type: 2
         },
         {
           name: "VIP",
-          type: 1
+          type: 0
         },
         {
           name: "电影",
-          type: 2
+          type: 1
         },
         {
           name: "综艺",
@@ -62,23 +62,23 @@ export default {
         },
         {
           name: "少儿",
-          type: 5
+          type:''
         },
         {
           name: "娱乐",
-          type: 6
+          type: 5
         },
         {
           name: "潮音",
-          type: 7
+          type: ''
         },
         {
           name: "游戏",
-          type: 8
+          type: ''
         },
         {
           name: "纪录片",
-          type: 9
+          type: ''
         }
       ],
     };
@@ -89,10 +89,10 @@ export default {
         console.log(res);
         this.all = res.data.data;
         console.log(all);
+      },
+      params: {
+        type: 2
       }
-      // params: {
-      //   type: 2
-      // }
     });
   },
   methods: {}

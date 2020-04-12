@@ -5,36 +5,48 @@
       <li
         v-for="(item, index) of arr "
         :key="index"
-        :class="{subnav :active == item.type}"
+        :class="{subnav :active === item.type}"
         @click="go(item.type)"
       >
-        <a href>{{item.name }}</a>
+        <span>{{item.name }}</span>
       </li>
     </ul>
   </div>
 </template>
     
 <script>
+import AJAX from "../../../config/ajax";
 export default {
   name: "top-nav",
   props: {
     arr: {
       type: Array,
-      default: []
+      default: [],
+      
     }
   },
   data() {
     return {
-      active: ''
+      active: -1
     };
   },
   methods: {
     go(type) {
       this.active = type;
       console.log(type);
-      if (type == 1) {
+      if (type === 0) {
         return this.$router.push("/VIP");
       }
+      AJAX.getHome({
+        callback: res => {
+          console.log(res);
+          this.all = res.data.data;
+          console.log(all);
+        },
+        params: {
+          type: type,
+        }
+      });
     }
   }
 };
@@ -57,11 +69,11 @@ export default {
   display: inline-block;
   margin-right: 20px;
 }
-.subnav a {
+.subnav span {
   color: #ff6002;
   position: relative;
 }
-.subnav a::after {
+.subnav span::after {
   content: "";
   position: absolute;
   width: 18px;
@@ -70,7 +82,7 @@ export default {
   top: 26px;
   left: 8px;
 }
-ul li a {
+ul li span {
   color: #272727;
   font-size: 17px;
   font-weight: 600;
