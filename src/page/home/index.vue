@@ -38,7 +38,7 @@ export default {
       arr: [
         {
           name: "精选",
-          type: ''
+          type: 10
         },
         {
           name: "电视剧",

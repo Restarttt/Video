@@ -51,12 +51,12 @@ export default {
   methods: {
      go(a) {
       console.log(a);
-      if (a == 1) {
+      if (a == a) {
         return this.$router.push("/detail");
       }
     }
   }
-};
+};  
 </script>
 <style lang="less" scoped>
 //轮播图
