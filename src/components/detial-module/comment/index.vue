@@ -37,7 +37,6 @@ export default {
 p {
   font-size: 15px;
   font-weight: 600;
-  margin-bottom: 10px;
 }
 .comment {
   width: 100%;
@@ -67,21 +66,29 @@ img {
 }
 /* 打开客户端 */
 .client {
+  display: flex;
   width: 100%;
-  display: inline-block;
+  height: 40px;
   text-align: center;
+  border: 1px solid #e6e6e6;
+  align-items: center;
+  border-radius: 5px;
+  
 }
-.client-img{
-    display: inline-block;
-    width: 25px;
-    height: 100%;
-    background: url(https://puui.qpic.cn/vupload/0/common_logo_square.png/0)  no-repeat;
+.client-img {
+  width: 25px;
+  height: 38px;
+  background: url(https://puui.qpic.cn/vupload/0/common_logo_square.png/0) 100%
+    no-repeat;
+  background-size: contain;
+  margin-left: 15px;
 }
 .client span {
   color: #222;
   font-size: 15px;
-  border: 1px solid #e6e6e6;
-  padding: 8px 15px;
+  vertical-align: middle;
+  font-weight: 500;
   border-radius: 5px;
+  margin-left: 10px;
 }
 </style>
