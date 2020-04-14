@@ -9,7 +9,7 @@
         class="content-1"
         v-for="(item,index) of sync_data.list"
         :key="index"
-        :class=" {first_content: index == 0} "
+        :class=" {first_content: index === 0} "
       >
       <a :href="item.url">
         <div class="img-suspend">

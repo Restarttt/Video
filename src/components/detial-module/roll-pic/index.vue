@@ -5,10 +5,10 @@
       <swiper-slide v-for="(item,index) of roll" :key="index">
         <div class="roll">
           <div class="roll-left">
-            <div class="roll-img">
-              <img :src="item.img" />
+            <div class="roll-img"  >
+              <img :src="item.img"  />
             </div>
-            <p>{{item.title}}</p>
+            <span>{{item.title}}</span>
           </div>
           <div class="roll-right">
             <span class="open">打开</span>
@@ -74,7 +74,6 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
 }
 .roll-left {
   width: 73%;
@@ -83,18 +82,25 @@ export default {
   align-items: center;
 }
 .roll-img {
-  width: 100%;
+  width: 85px;
+  height: 48px;
 }
 .roll-img img {
+  width: 85px;
+  height: 48px;
   border: 1px solid rgba(0, 0, 40, 0.1);
   border-radius: 5px;
 }
-.roll-left p {
+.roll-left span {
+  width: 100%;
+  line-height: 23px;
+  display: inline-block;
+  height: 48px;
   color: #030303;
   font-size: 15px;
   margin-left: 10px;
   overflow: hidden;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   text-overflow: ellipsis;
 }
 .roll-right {

@@ -87,6 +87,7 @@ img {
   color: #000028;
   font-size: 14px;
   margin-bottom: 5px;
+  overflow: hidden;
 }
 .small-title {
   color: #a2a2b6;

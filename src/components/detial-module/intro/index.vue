@@ -32,13 +32,12 @@ export default {
 <style less="lang" scoped>
 .intro {
   width: 100%;
-  padding: 0 20px;
   position: relative;
 }
 .intro::after {
   content: "";
   position: absolute;
-  bottom: -2px;
+  bottom: -5px;
   left: 16px;
   width: calc(100% - 16px);
   height: 1px;

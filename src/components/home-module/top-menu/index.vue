@@ -15,7 +15,7 @@
             <span>全{{item.max}}集</span>
           </div>
           <div class="member-center" v-if="item.vip ==10">
-            <div class="triangle"></div>
+            <div class="triangle">{{vip}}</div>
             <span>{{item.member}}</span>
           </div>
         </div>
