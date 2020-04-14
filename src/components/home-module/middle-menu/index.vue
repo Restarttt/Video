@@ -15,7 +15,7 @@
         <div class="img-suspend">
           <img :src="item.img" />
           <div class="update">
-            <span>{{item.score}}.0</span>
+            <span >{{item.score}}.0</span>
           </div>
           <div class="member-center" v-if="item.vip == 10">
             <div class="triangle"></div>
@@ -129,7 +129,7 @@ p.small-title {
   padding: 1px 4px;
 }
 
-// // 左上角的图标
+// 左上角的图标
 .member-center {
   height: 18px;
   display: flex;

@@ -12,14 +12,16 @@
           <img v-bind:src="item.img" />
           <div class="update">
             <!-- 右下角 -->
-            <span>全{{item.max}}集</span>
+            <span v-if="item.max">全{{item.max}}集</span>
           </div>
           <div class="member-center" v-if="item.vip ==10">
-            <div class="triangle">{{vip}}</div>
-            <span>{{item.member}}</span>
+            <div class="triangle"></div>
+            <span >{{item.member}}</span>
+          </div>
+          <div class="member-center" v-if="item.vip ==1">
+            <img src="https://puui.qpic.cn/vupload/0/1570868832052_opuuuid196.png/0" alt />
           </div>
         </div>
-
         <p class="big-title">{{item.name}}</p>
         <p class="small-title">{{item.summary}}</p>
       </div>
@@ -86,6 +88,7 @@ img {
   margin-bottom: 5px;
   white-space: nowrap;
   text-overflow: ellipsis;
+
   overflow: hidden;
 }
 .small-title {
@@ -150,5 +153,37 @@ img {
 span {
   font-size: 12px;
   color: #a2a2b6;
+}
+// 左上角的图标
+.member-center {
+  height: 18px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 4px;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border: 6px solid #ff6002;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-top: 6px solid transparent;
+}
+
+.member-center span {
+  font-size: 10px;
+  color: #fff;
+  text-shadow: 0 1px 2px #555;
+  font-weight: 400;
+  position: relative;
+  left: -3px;
+  text-shadow: 0 1px 2px #555;
+}
+.member-center img {
+  width: 24px;
+  height: auto;
+  position: relative;
+  left: 5px;
 }
 </style>

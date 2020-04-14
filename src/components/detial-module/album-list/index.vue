@@ -5,7 +5,7 @@
       <span class="promotion_title">《奇门遁甲》福利加赠！VIP开宝箱 赢华为Mate30</span>
     </div>
     <div class="album">
-      <p>{{album_list.album_title}}</p>
+      <p>{{album_list.album_title}}:</p>
       <swiper :options="swiperOption">
         <swiper-slide v-for="(item,index) of album_list.list" :key="index">
           <div class="ver">

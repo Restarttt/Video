@@ -9,11 +9,14 @@
       <swiper-slide v-for="(item,index) of children_data.list" :key="index">
         <a :href="item.url">
           <span class="cartoon">
-            <img :src="item.img" @click="getsubscript(index, item.name)" />
-            <span class="member-center" v-if="item.vip ==10">
-              <div class="triangle"></div>
-              <span>{{item.member}}</span>
-            </span>
+            <div class="img-suspend">
+              <img :src="item.img" @click="getsubscript(index, item.name)" />
+              <div class="update">
+                <!-- 右下角 -->
+                <span v-if="item.max">全{{item.max}}集</span>
+                <span v-if="item.time">{{item.time}}</span>
+              </div>
+            </div>  
             <p class="big-title">{{item.name}}</p>
             <p class="small-title" @click=" getnum">{{item.title}}</p>
           </span>
@@ -37,9 +40,9 @@ export default {
   data() {
     return {
       swiperOption: {
-        spaceBetween: 10,
+        spaceBetween: 15,
         freeMode: true,
-        slidesPerView: 2
+        slidesPerView: 2.5
       },
       b: "",
       num: ""
@@ -75,19 +78,29 @@ h5 {
   display: inline-block;
   margin-top: 20px;
   width: 100%;
+  height: 136px;
+  position: relative;
 }
 // 图片信息
 img {
   height: 94.28px;
-  // margin: 0 0 3px 0;
+  margin: 0 0 3px 0;
+  border-radius: 5px;
 }
 
 // 标题文字信息
 .big-title {
-  color: #000028;
-  font-size: 14px;
-  margin-bottom: 5px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow: hidden;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+  color: #000028;
+  margin-bottom: 5px;
+  font-weight: 500;
 }
 .small-title {
   color: #a2a2b6;
@@ -97,4 +110,23 @@ img {
 .child-1 {
   margin-bottom: 20px;
 }
+// 右下角文字
+.img-suspend {
+  position: relative;
+  width: 100%;
+}
+.update {
+  position: absolute;
+  bottom: 11px;
+  right: 6px;
+}
+
+.update span {
+  background-color: rgba(162, 162, 182, 0.5);
+  font-size: 10px;
+  color: #fff;
+  font-weight: 400;
+  padding: 1px 4px;
+}
+
 </style>
