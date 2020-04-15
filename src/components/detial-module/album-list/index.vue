@@ -79,15 +79,20 @@ p {
   top: 0;
   right: 0;
 }
-
-li{
+ul {
+}
+li {
   width: 100%;
+  height: 80px;
   text-align: center;
   line-height: 80px;
   background-color: #f6f8fa;
   border-radius: 3px;
+  
 }
 span {
+  display: inline-block;
+  position: relative;
   width: 100%;
   display: inline-block;
   font-weight: 500;

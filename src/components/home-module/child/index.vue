@@ -86,7 +86,7 @@ h5 {
 }
 // 图片信息
 img {
-  height: 94.28px;
+  // height: 94.28px;
   margin: 0 0 3px 0;
   border-radius: 5px;
 }

@@ -43,18 +43,19 @@ h2 {
   font-weight: 600;
   margin: 0 0 15px 0;
 }
-.recommed{
-  width:100%;
+.recommed {
+  width: 100%;
+  margin-left: 20px;
 }
 .recommed_list {
-  width:56%;
+  width: 56%;
   height: 204.8px;
   text-align: center;
-
 }
-.recommed_list img{
+img {
   display: inline-block;
-
+  width: 64px;
+  height: 64px;
 }
 p {
   color: #000;
@@ -64,7 +65,7 @@ p {
   text-overflow: ellipsis;
   text-align: center;
   font-weight: 500;
-  margin:  5px 0 10px 0;
+  margin: 5px 0 10px 0;
 }
 .download {
   width: 64px;
@@ -73,7 +74,7 @@ p {
   text-align: center;
   margin: 0 auto;
   line-height: 32px;
-    border-radius: 5px;
+  border-radius: 5px;
 }
 span {
   display: inline-block;

@@ -101,7 +101,6 @@ export default {
   width: 100%;
   line-height: 24px;
   display: inline-block;
-  height: 48px;
   color: #030303;
   font-size: 15px;
   margin-left: 10px;

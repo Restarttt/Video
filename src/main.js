@@ -16,4 +16,4 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
     router,
     store,
-}).$mount('#app')
+}).$mount('#web')

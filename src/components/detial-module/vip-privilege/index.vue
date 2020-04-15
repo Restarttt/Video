@@ -6,15 +6,15 @@
       <swiper-slide v-for="(item,index) of privilege_data.list" :key="index">
         <div class="download" :class="{'frist_download':index == 0} ">
           <div class="download-1" :class="{'frist_down':index == 0} ">
-            <img :src="item.img" />
+            <img :src="item.img" v-if="item.img" />
             <span>{{item.name}}</span>
+            <div class="frist">
+              <p>{{item.Intro}}</p>
+              <span class="today_text">{{item.txt}}</span>
+            </div>
           </div>
           <div class="today">
             <p>{{item.summary}}</p>
-          </div>
-          <div class="frist">
-            <p>{{item.Intro}}</p>
-            <span class="today_text">{{item.txt}}</span>
           </div>
         </div>
       </swiper-slide>
@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import { swiper, swiperSlide } from "vue-awesome-swiper";
 export default {
   name: "vip-privilege",
   props: {
@@ -56,17 +57,15 @@ h5 {
 }
 /* 第一个大图 */
 .frist_download {
-  width: 100%;
-  height: 156px;
-}
-.frist_down {
-  height: 69px;
+  height: 80px;
   background-color: #ffedbf;
 }
 .frist_download .frist_down span {
   color: #cc9629;
 }
 .frist {
+  
+  height: 40px;
   display: inline-block;
   text-align: center;
 }
@@ -75,7 +74,7 @@ h5 {
   font-size: 13px;
   font-weight: 600;
 }
-.frist span {
+.download-1 .frist span {
   text-align: left;
   color: #979797;
   font-size: 12px;
@@ -96,6 +95,8 @@ h5 {
   justify-content: center;
 }
 .download-1 img {
+  /* width: 50px;
+  height: 50px; */
   width: 27%;
   height: 47%;
 }

@@ -13,9 +13,9 @@
       <child :children_data=" welfare"></child>
       <vip-privilege :privilege_data=" privilege"></vip-privilege>
       <recommend :tour="hand_tour"></recommend>
-      <!-- <div class="fixed">
-      <roll-pic :roll="roll_pic"></roll-pic>
-      </div> -->
+      <div class="fixed">
+        <roll-pic :roll="roll_pic"></roll-pic>
+      </div>
     </div>
   </div>
 </template>
@@ -296,9 +296,13 @@ export default {
           {
             img: "https://puui.qpic.cn/vupload/0/20180802_h6olrx8ak8k/0",
             name: " 并行下载",
-            summary: "",
-            Intro:'今日特权',
-            txt:'分批下载太耗时，高速并行更畅快！VIP并行下载，多个视频可同时缓存。'
+            summary: ""
+          },
+          {
+            img:'',
+            Intro: "今日特权",
+            txt:
+              "分批下载太耗时，高速并行更畅快！VIP并行下载，多个视频可同时缓存。"
           },
           {
             img: "https://puui.qpic.cn/vupload/0/20180802_hcs3huo3pfi/0",
@@ -384,10 +388,10 @@ export default {
   padding: 0 15px;
 }
 .fixed {
-  height: 100px;
-  background-color: #fff;
-  z-index: 1000;
-  position: fixed;
-  bottom: -1px;
+  /* height: 100px; */
+  /* background-color: #fff;
+z-index: 1000; */
+  /* position: fixed;
+bottom: -1px;  */
 }
 </style>

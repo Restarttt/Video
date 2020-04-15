@@ -7,7 +7,7 @@ import detail from "../page/detail/index.vue"
 Vue.use(VueRouter); //安装  
 
 const routes = [{
-        path: "/", //路径名
+        path: "/", //路径名（主页面）
         component: index //引入的组件
     },
     {
@@ -26,9 +26,9 @@ const routes = [{
 ]
 
 const router = new VueRouter({
-    mode: "history",
+    mode: "history", //历史模式
     base: process.env.BASE_URL,
     routes,
 
-});
+}); //创建
 export default router;
