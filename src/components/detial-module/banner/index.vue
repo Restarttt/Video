@@ -70,6 +70,5 @@ span {
   border-radius: 6px;
   background-color: #ff6022;
 }
-span {
-}
+
 </style>

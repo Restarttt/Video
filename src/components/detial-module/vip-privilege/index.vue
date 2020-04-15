@@ -26,6 +26,10 @@
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 export default {
   name: "vip-privilege",
+  components: {
+    swiper,
+    swiperSlide
+  },
   props: {
     privilege_data: {
       type: Object,
@@ -64,7 +68,6 @@ h5 {
   color: #cc9629;
 }
 .frist {
-  
   height: 40px;
   display: inline-block;
   text-align: center;

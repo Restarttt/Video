@@ -31,4 +31,4 @@ const router = new VueRouter({
     routes,
 
 }); //创建
-export default router;
+export default router; //导出了才能被其他地方导入
