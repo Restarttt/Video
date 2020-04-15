@@ -1,8 +1,8 @@
     <!-- 少儿精选剧场 -->
 <template>
-  <span class="swiper-child">
+  <div class="swiper-child">
     <h5 @click="getrandom">
-      {{children_data.title}}
+      {{children_data.title}}:
       <span>{{b}}</span>
     </h5>
     <swiper :options="swiperOption">
@@ -25,7 +25,7 @@
 
       <!-- <div slot="pagination" class="swiper-pagination"></div> -->
     </swiper>
-  </span>
+  </div>
 </template>
     
 <script>
@@ -72,11 +72,14 @@ h5 {
   font-weight: 600;
   color: #000;
 }
+.swiper-child{
+  margin:  25px 0;
 
+}
 // 图片内容
 .cartoon {
   display: inline-block;
-  margin-top: 20px;
+  margin: 10px 0;
   width: 100%;
   height: 136px;
   position: relative;

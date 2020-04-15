@@ -37,6 +37,7 @@ export default {
   align-items: center;
   padding: 0 15px;
   justify-content: space-between;
+  z-index: 1000;
 }
 .logo {
   width: 122px;

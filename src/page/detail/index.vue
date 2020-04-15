@@ -11,7 +11,7 @@
       <child :children_data=" teaser"></child>
       <comment :comment_data="comment_list"></comment>
       <child :children_data=" welfare"></child>
-      <vip-privilege></vip-privilege>
+      <vip-privilege :privilege_data=" privilege"></vip-privilege>
       <recommend :tour="hand_tour"></recommend>
       <!-- <div class="fixed">
       <roll-pic :roll="roll_pic"></roll-pic>
@@ -240,46 +240,137 @@ export default {
           }
         ]
       },
-      hand_tour:{
-        title:'周边推荐',
-        list:[
+      hand_tour: {
+        title: "周边推荐",
+        list: [
           {
-            img:'https://inews.gtimg.com/newsapp_ls/0/11461728990_150150/0?max_age=7776000',
-            name:' 跑跑卡丁车官方竞速版',
+            img:
+              "https://inews.gtimg.com/newsapp_ls/0/11461728990_150150/0?max_age=7776000",
+            name: " 跑跑卡丁车官方竞速版"
           },
-           {
-            img:'https://inews.gtimg.com/newsapp_ls/0/11191028368_150150/0?max_age=7776000',
-            name:' 龙珠最强之战',
+          {
+            img:
+              "https://inews.gtimg.com/newsapp_ls/0/11191028368_150150/0?max_age=7776000",
+            name: " 龙珠最强之战"
           },
-           {
-            img:'https://inews.gtimg.com/newsapp_ls/0/11191018817_150150/0?max_age=7776000',
-            name:' 一零零一',
+          {
+            img:
+              "https://inews.gtimg.com/newsapp_ls/0/11191018817_150150/0?max_age=7776000",
+            name: " 一零零一"
           },
-           {
-            img:'https://inews.gtimg.com/newsapp_ls/0/11191023013_150150/0?max_age=7776000',
-            name:' 三生三世十里桃花',
+          {
+            img:
+              "https://inews.gtimg.com/newsapp_ls/0/11191023013_150150/0?max_age=7776000",
+            name: " 三生三世十里桃花"
           },
-           {
-            img:'https://inews.gtimg.com/newsapp_ls/0/11191033500_150150/0?max_age=7776000',
-            name:'  拉结尔',
+          {
+            img:
+              "https://inews.gtimg.com/newsapp_ls/0/11191033500_150150/0?max_age=7776000",
+            name: "  拉结尔"
           },
-           {
-            img:'https://inews.gtimg.com/newsapp_ls/0/11212317678_150150/0?max_age=7776000',
-            name:'食物语',
+          {
+            img:
+              "https://inews.gtimg.com/newsapp_ls/0/11212317678_150150/0?max_age=7776000",
+            name: "食物语"
           },
-             {
-            img:'https://puui.qpic.cn/iwan/0/bd64babec3d2726c0dea496c1712272c/0?max_age=7776000',
-            name:'龙族幻想',
+          {
+            img:
+              "https://puui.qpic.cn/iwan/0/bd64babec3d2726c0dea496c1712272c/0?max_age=7776000",
+            name: "龙族幻想"
           },
-             {
-            img:'https://inews.gtimg.com/newsapp_ls/0/11191080512_150150/0?max_age=7776000',
-            name:'狐妖小红娘',
+          {
+            img:
+              "https://inews.gtimg.com/newsapp_ls/0/11191080512_150150/0?max_age=7776000",
+            name: "狐妖小红娘"
           },
-             {
-            img:'https://inews.gtimg.com/newsapp_ls/0/11220183303_150150/0?max_age=7776000',
-            name:'猎人',
+          {
+            img:
+              "https://inews.gtimg.com/newsapp_ls/0/11220183303_150150/0?max_age=7776000",
+            name: "猎人"
+          }
+        ]
+      },
+      privilege: {
+        title: "VIP全部特权",
+        list: [
+          {
+            img: "https://puui.qpic.cn/vupload/0/20180802_h6olrx8ak8k/0",
+            name: " 并行下载",
+            summary: "",
+            Intro:'今日特权',
+            txt:'分批下载太耗时，高速并行更畅快！VIP并行下载，多个视频可同时缓存。'
           },
-
+          {
+            img: "https://puui.qpic.cn/vupload/0/20180802_hcs3huo3pfi/0",
+            name: " 1080P",
+            summary: "畅享蓝光清晰度"
+          },
+          {
+            img: "https://puui.qpic.cn/vupload/0/20181221_vru23f4m80d/0",
+            name: " 线下活动",
+            summary: "享专属线下活动"
+          },
+          {
+            img: "https://puui.qpic.cn/vupload/0/20180802_86r152ithld/0",
+            name: " 广告特权",
+            summary: "自动跳过片头广告"
+          },
+          {
+            img: "https://puui.qpic.cn/vupload/0/20180802_1k8wtkquc0k/0",
+            name: "边下边播",
+            summary: "不等下完想看就看"
+          },
+          {
+            img: "https://puui.qpic.cn/vupload/0/20180802_nhjbcbgf22c/0",
+            name: " 生日礼包",
+            summary: "陪你成长生日快乐"
+          },
+          {
+            img: "https://puui.qpic.cn/vupload/0/20180802_edbt41mwzfv/0",
+            name: "漫画特权",
+            summary: "专属折扣及礼包"
+          },
+          {
+            img: "https://puui.qpic.cn/vupload/0/20190904_t632g6el5i/0",
+            name: "话费福利",
+            summary: "话费福利免费领"
+          },
+          {
+            img: "https://puui.qpic.cn/vupload/0/20190527_b7tvudpe4xm/0",
+            name: "折扣享大屏",
+            summary: "超级影视VIP折扣升"
+          },
+          {
+            img: "https://puui.qpic.cn/vupload/0/20180802_0mv9htydljq/0",
+            name: "首席体验官",
+            summary: "快人一步抢先体验"
+          },
+          {
+            img:
+              "https://vfiles.gtimg.cn/wupload/vip.vip_system_privilege_detail_online/20200227_1yg7qapu3jwicon1.png",
+            name: "超前点播",
+            summary: "追剧加速快人一步"
+          },
+          {
+            img: "https://puui.qpic.cn/vupload/0/20180802_9znejs72ev/0",
+            name: "游戏礼包",
+            summary: "游戏达人快人一步"
+          },
+          {
+            img: "https://puui.qpic.cn/vupload/0/20181221_l89s122apil/0",
+            name: "升级礼包",
+            summary: "等级提升有好礼"
+          },
+          {
+            img: "https://puui.qpic.cn/vupload/0/20190527_b7tvudpe4xm/0",
+            name: "折扣享大屏",
+            summary: "超级影视VIP折扣升"
+          },
+          {
+            img: "https://puui.qpic.cn/vupload/0/20190527_b7tvudpe4xm/0",
+            name: "折扣享大屏",
+            summary: "超级影视VIP折扣升"
+          }
         ]
       }
     };
@@ -292,10 +383,10 @@ export default {
 .detail-bottom {
   padding: 0 15px;
 }
-.fixed{
+.fixed {
   height: 100px;
   background-color: #fff;
-  z-index: 100;
+  z-index: 1000;
   position: fixed;
   bottom: -1px;
 }
