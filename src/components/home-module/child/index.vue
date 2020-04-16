@@ -2,7 +2,7 @@
 <template>
   <div class="swiper-child">
     <h5 @click="getrandom">
-      {{children_data.title}}:
+      {{children_data.title}}:{{getrandom}}
       <span>{{b}}</span>
     </h5>
     <swiper :options="swiperOption">
@@ -48,8 +48,14 @@ export default {
       num: ""
     };
   },
+  computed:{
+    getrandom(){
+      return this.$store.state.num
+    }
+
+  },
   methods: {
-    getrandom() {
+    getnum() {
       let a = Math.max(10, -10, 5, -18, 100);
       this.b = ++a;
       console.log(this.b);
@@ -62,7 +68,8 @@ export default {
       let num = Math.round(Math.random() * 6);
       this.num = num;
       console.log(num, d);
-    }
+    },
+
   }
 };
 </script>

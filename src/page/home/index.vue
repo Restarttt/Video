@@ -1,5 +1,6 @@
 <template>
   <div class="overall">
+    <!-- {{getdata}} -->
     <big-logo></big-logo>
     <top-nav :arr="arr"></top-nav>
     <div class="all" v-for="(item, index) of all" :key="index">
@@ -82,6 +83,12 @@ export default {
         }
       ],
     };
+  },
+  computed:{
+    // getdata(){
+    //   return this.store.state.num
+    // }
+
   },
   mounted() {
     AJAX.getHome({

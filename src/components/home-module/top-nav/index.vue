@@ -8,7 +8,7 @@
         :class="{subnav :active === item.type}"
         @click="go(item.type)"
       >
-        <span>{{item.name }}</span>
+        <span @click="num()">{{item.name }}</span>
       </li>
     </ul>
   </div>
@@ -21,8 +21,7 @@ export default {
   props: {
     arr: {
       type: Array,
-      default: [],
-      
+      default: []
     }
   },
   data() {
@@ -31,6 +30,9 @@ export default {
     };
   },
   methods: {
+    num() {
+      this.$store.commit("NUM");
+    },
     go(type) {
       this.active = type;
       console.log(type);
@@ -44,9 +46,10 @@ export default {
           console.log(all);
         },
         params: {
-          type: type,
+          type: type
         }
       });
+      // this.$store.commit('NUM',type)
     }
   }
 };
