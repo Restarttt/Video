@@ -1,6 +1,6 @@
 <template>
   <div class="overall">
-    <!-- {{getdata}} -->
+    {{getdata}}
     <big-logo></big-logo>
     <top-nav :arr="arr"></top-nav>
     <div class="all" v-for="(item, index) of all" :key="index">
@@ -39,7 +39,7 @@ export default {
       arr: [
         {
           name: "精选",
-          type: 10
+          type: 5
         },
         {
           name: "电视剧",
@@ -63,7 +63,7 @@ export default {
         },
         {
           name: "少儿",
-          type:''
+          type: ""
         },
         {
           name: "娱乐",
@@ -71,35 +71,34 @@ export default {
         },
         {
           name: "潮音",
-          type: ''
+          type: ""
         },
         {
           name: "游戏",
-          type: ''
+          type: ""
         },
         {
           name: "纪录片",
-          type: ''
+          type: ""
         }
-      ],
+      ]
     };
   },
-  computed:{
-    // getdata(){
-    //   return this.store.state.num
-    // }
-
+  computed: {
+    getdata() {
+      this.all = this.$store.state.data;
+      console.log(this.all);
+    }
   },
   mounted() {
     AJAX.getHome({
       callback: res => {
         console.log(res);
         this.all = res.data.data;
-        console.log(all);
-      },
-      params: {
-        type: 2
       }
+      // params: {
+      //   type: 2
+      // }
     });
   },
   methods: {}

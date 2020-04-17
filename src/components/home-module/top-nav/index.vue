@@ -8,7 +8,7 @@
         :class="{subnav :active === item.type}"
         @click="go(item.type)"
       >
-        <span @click="num()">{{item.name }}</span>
+        <span >{{item.name }}</span>
       </li>
     </ul>
   </div>
@@ -26,12 +26,12 @@ export default {
   },
   data() {
     return {
-      active: 10
+      active: 5
     };
   },
   methods: {
     num() {
-      this.$store.commit("NUM");
+      
     },
     go(type) {
       this.active = type;
@@ -43,13 +43,14 @@ export default {
         callback: res => {
           console.log(res);
           this.all = res.data.data;
-          console.log(all);
+          console.log(this.all);
+          this.$store.commit('NUM', this.all)
         },
         params: {
           type: type
         }
       });
-      // this.$store.commit('NUM',type)
+      this.$store.commit("NUM");
     }
   }
 };

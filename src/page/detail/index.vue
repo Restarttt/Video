@@ -299,7 +299,7 @@ export default {
             summary: ""
           },
           {
-            img:'',
+            img: "",
             Intro: "今日特权",
             txt:
               "分批下载太耗时，高速并行更畅快！VIP并行下载，多个视频可同时缓存。"
@@ -388,10 +388,10 @@ export default {
   padding: 0 15px;
 }
 .fixed {
-  /* height: 100px; */
-  /* background-color: #fff;
-z-index: 1000; */
-  /* position: fixed;
-bottom: -1px;  */
+  height: 100px;
+  background-color: #fff;
+  z-index: 1000;
+  position: fixed;
+  bottom: -1px;
 }
 </style>

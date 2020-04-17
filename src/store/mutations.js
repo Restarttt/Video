@@ -4,16 +4,16 @@ const DATA = 'DATA'
 
 export default {
     //点击进入下一题
-    [ADD_NUM](state, num) {
-        state.num += num;
-    },
-    [NUM](state) {
-        state.num = Math.random()
+    // [ADD_NUM](state, num) {
+    //     state.num += num;
+    // },
+    [NUM](state, data) {
+        // state.num = Math.random()
+        console.log(data)
+        state.data = data
+
+
 
     },
-    // [DATA](state) {
-    //     state.num = type
-    // }
-
 
 }
