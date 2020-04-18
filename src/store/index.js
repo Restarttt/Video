@@ -8,6 +8,7 @@ Vue.use(Vuex)
 const state = {
     // num: 0,
     data: [],
+    name: '',
 }
 
 export default new Vuex.Store({

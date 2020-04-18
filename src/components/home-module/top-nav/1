@@ -1,5 +1,0 @@
-const c = 1 
-function get(a){
-    console.log(a)
-}
-get(c)

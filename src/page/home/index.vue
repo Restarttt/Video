@@ -1,6 +1,6 @@
 <template>
   <div class="overall">
-    {{getdata}}
+    <span>{{getname}}</span>
     <big-logo></big-logo>
     <top-nav :arr="arr"></top-nav>
     <div class="all" v-for="(item, index) of all" :key="index">
@@ -81,13 +81,18 @@ export default {
           name: "纪录片",
           type: ""
         }
-      ]
+      ],
+      b:''
     };
   },
   computed: {
     getdata() {
       this.all = this.$store.state.data;
       console.log(this.all);
+    },
+    getname() {
+      return this.$store.state.name;
+
     }
   },
   mounted() {
@@ -95,9 +100,9 @@ export default {
       callback: res => {
         console.log(res);
         this.all = res.data.data;
-      }
+      },
       // params: {
-      //   type: 2
+      //   type: 3
       // }
     });
   },

@@ -2,7 +2,7 @@
 <template>
   <div class="submenu">
     <h5 @click="getrandom">
-      {{bomb.title}}:
+      {{bomb.title}}:{{b}}
       <span>{{b}}</span>
     </h5>
 

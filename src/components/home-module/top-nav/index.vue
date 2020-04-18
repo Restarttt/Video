@@ -6,9 +6,9 @@
         v-for="(item, index) of arr "
         :key="index"
         :class="{subnav :active === item.type}"
-        @click="go(item.type)"
+        @click="go(item.type,item.name)"
       >
-        <span >{{item.name }}</span>
+        <span>{{item.name }}</span>
       </li>
     </ul>
   </div>
@@ -26,16 +26,16 @@ export default {
   },
   data() {
     return {
-      active: 5
+      active: 2,
     };
   },
   methods: {
-    num() {
-      
-    },
-    go(type) {
+    num() {},
+    go(type, name) {
+      this.$store.commit('NAME', name)
       this.active = type;
       console.log(type);
+
       if (type === 0) {
         return this.$router.push("/VIP");
       }
@@ -44,13 +44,12 @@ export default {
           console.log(res);
           this.all = res.data.data;
           console.log(this.all);
-          this.$store.commit('NUM', this.all)
+          this.$store.commit("NUM", this.all);
         },
         params: {
           type: type
         }
       });
-      this.$store.commit("NUM");
     }
   }
 };

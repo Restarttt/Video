@@ -1,8 +1,8 @@
     <!-- 少儿精选剧场 -->
 <template>
   <div class="swiper-child">
-    <h5 @click="getrandom">
-      {{children_data.title}}:{{getrandom}}
+    <h5 >
+      {{children_data.title}}:
       <span>{{b}}</span>
     </h5>
     <swiper :options="swiperOption">
@@ -49,9 +49,9 @@ export default {
     };
   },
   computed:{
-    getrandom(){
-      return this.$store.state.num
-    }
+    // getrandom(){
+    //   return this.$store.state.num
+    // }
 
   },
   methods: {
