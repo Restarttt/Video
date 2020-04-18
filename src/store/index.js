@@ -9,6 +9,7 @@ const state = {
     // num: 0,
     data: [],
     name: '',
+    page: []
 }
 
 export default new Vuex.Store({

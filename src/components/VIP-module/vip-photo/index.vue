@@ -1,11 +1,11 @@
 <template>
   <!-- 电影图片 -->
   <div class="vip-photo">
-    <div class="photo_list" v-for="(item,index) of photo" :key="index" >
-      <a :href="item.url">
-        <div class="photo_icon" v-if="item.type > 0  && item.imgv" @click="go(index)">
+    <div class="photo_list" v-for="(item,index) of photo" :key="index">
+      <router-link to="/detail">
+        <div class="photo_icon" v-if="item.type > 0  && item.imgv">
           <img :src="item.imgv" />
-          <i class="vip_icon">
+          <i class="vip_icon" @click="go()">
             <img src="https://i.gtimg.cn/qqlive/images/20190528/VIP.png" v-if="item.vip == 10" />
             <img
               src="https://i.gtimg.cn/qqlive/images/20160715/only@2x.png"
@@ -14,7 +14,8 @@
           </i>
           <p>{{item.name}}</p>
         </div>
-      </a>
+      </router-link>
+      <router-view />
     </div>
   </div>
 </template>
@@ -32,9 +33,12 @@ export default {
     return {};
   },
   methods: {
-    go(a) {
-      console.log(a);
-      return a;
+    // go(a) {
+    //   console.log(a);
+    //   return a;
+    // },
+    go() {
+      this.$router.push("/");
     }
   }
 };

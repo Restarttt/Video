@@ -26,17 +26,17 @@ export default {
   },
   data() {
     return {
-      active: 2,
+      active: 0
     };
   },
   methods: {
     num() {},
     go(type, name) {
-      this.$store.commit('NAME', name)
+      this.$store.commit("NAME", name);
       this.active = type;
       console.log(type);
 
-      if (type === 0) {
+      if (type === -1) {
         return this.$router.push("/VIP");
       }
       AJAX.getHome({
@@ -51,6 +51,17 @@ export default {
         }
       });
     }
+  },
+  mounted() {
+    AJAX.getHome({
+      callback: res => {
+        this.all = res.data.data;
+        this.$store.commit("NUM", this.all);
+      },
+      // params: {
+      //   type: 1
+      // }
+    });
   }
 };
 </script>

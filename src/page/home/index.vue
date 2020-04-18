@@ -35,11 +35,11 @@ export default {
   },
   data() {
     return {
-      all: [],
+      // all: [],
       arr: [
         {
           name: "精选",
-          type: 5
+          type: 0
         },
         {
           name: "电视剧",
@@ -47,7 +47,7 @@ export default {
         },
         {
           name: "VIP",
-          type: 0
+          type: -1
         },
         {
           name: "电影",
@@ -82,29 +82,27 @@ export default {
           type: ""
         }
       ],
-      b:''
+      b: ""
     };
   },
   computed: {
-    getdata() {
-      this.all = this.$store.state.data;
-      console.log(this.all);
+    all() {     
+      return this.$store.state.data;
     },
     getname() {
-      return this.$store.state.name;
-
+      // return this.$store.state.name;
     }
   },
   mounted() {
-    AJAX.getHome({
-      callback: res => {
-        console.log(res);
-        this.all = res.data.data;
-      },
-      // params: {
-      //   type: 3
-      // }
-    });
+    // AJAX.getHome({
+    //   callback: res => {
+    //     console.log(res);
+    // this.all = res.data.data;
+    //   },
+    //   params: {
+    //     type: 2
+    //   }
+    // });
   },
   methods: {}
 };
