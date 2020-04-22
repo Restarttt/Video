@@ -36,7 +36,7 @@ export default {
       this.$store.commit("NAME", name);
       this.active = type;
       console.log(type);
-
+      
       if (type === -1) {
         return this.$router.push("/VIP");
       }
@@ -58,7 +58,10 @@ export default {
       .get("https://www.shuipingguo.com/getvideo", { params: {} })
       .then(res => {
         this.all = res.data.data;
-        this.$store.commit("NUM", this.all);
+        this.$store.commit("NUM", this.all)
+      .catch(err => {
+          console.log(err);
+        });
       });
 
     // AJAX.getHome({
