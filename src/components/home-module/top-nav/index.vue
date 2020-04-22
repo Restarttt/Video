@@ -16,6 +16,7 @@
     
 <script>
 import AJAX from "../../../config/ajax";
+import axios from "axios";
 export default {
   name: "top-nav",
   props: {
@@ -53,15 +54,22 @@ export default {
     }
   },
   mounted() {
-    AJAX.getHome({
-      callback: res => {
+    axios
+      .get("https://www.shuipingguo.com/getvideo", { params: {} })
+      .then(res => {
         this.all = res.data.data;
         this.$store.commit("NUM", this.all);
-      },
-      // params: {
-      //   type: 1
-      // }
-    });
+      });
+
+    // AJAX.getHome({
+    //   callback: res => {
+    //     this.all = res.data.data;
+    //     this.$store.commit("NUM", this.all);
+    //   }
+    //   // params: {
+    //   //   type: 1
+    //   // }
+    // });
   }
 };
 </script>

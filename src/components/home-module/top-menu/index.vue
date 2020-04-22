@@ -74,6 +74,9 @@ h5 {
   flex-wrap: wrap;
   margin: 20px 0 30px 0;
 }
+.content-1{
+  width: calc(50% - 5px);
+}
 
 // 图片信息
 img {
